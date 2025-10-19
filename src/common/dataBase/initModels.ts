@@ -1,4 +1,8 @@
 import { connectDatabase } from 'src/utils/databaseUtil';
+import { Sample } from './models/samples.models';
+import { List } from './models/list.models';
+import { Platform } from './models/platform.model';
+import { Family } from './models/family.models';
 
 export default async function initModels(config: {
   dialect: string;
@@ -16,8 +20,12 @@ export default async function initModels(config: {
     username: config.username,
     password: config.password,
   });
-  sequelize.addModels([]);
+  sequelize.addModels([Sample, List, Platform, Family]);
   const influencer: any = {};
   influencer.sequelize = sequelize;
+  influencer.Sample = Sample;
+  influencer.List = List;
+  influencer.Platforms = Platform;
+  influencer.Family = Family;
   return influencer;
 }

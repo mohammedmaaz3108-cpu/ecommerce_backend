@@ -86,6 +86,19 @@ export class ModelsService {
     return data;
   }
 
+  /*************  ✨ Windsurf Command ⭐  *************/
+  /**
+   * Find or create a record in the database based on the where clause.
+   *
+   * If the record already exists, it will be returned with created set to false.
+   * If the record does not exist, it will be created with created set to true.
+   *
+   * @param model The model to use for the find or create operation.
+   * @param where The where clause to use for the find or create operation.
+   * @param defaults The default values to use when creating a new record.
+   * @param transaction The transaction to use for the find or create operation.
+   * @returns A promise that resolves to an array containing the found or created record and a boolean indicating whether the record was created or not.
+/*******  a90de097-0cd9-46db-bbad-681e92ecd570  *******/
   async findOrCreateDataService(
     model: any,
     where: any,
