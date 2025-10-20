@@ -7,7 +7,12 @@ import { PlatformsModule } from './modules/platforms/platforms.module';
 import { FamilyModule } from './modules/family/family.module';
 
 @Module({
-  imports: [ConfigModule.forRoot({ isGlobal: true }), ModelsModule, PlatformsModule, FamilyModule],
+  imports: [
+    ConfigModule.forRoot({ isGlobal: true }),
+    ModelsModule,
+    PlatformsModule,
+    FamilyModule,
+  ],
   controllers: [AppController],
   providers: [AppService],
 })

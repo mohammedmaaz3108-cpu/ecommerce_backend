@@ -45,12 +45,4 @@ export class PlatformsService {
     );
     return samples;
   }
-
-  async getFamily() {
-    const family = await this.modelsService.getAllDataService(
-      this.models.prjModels.Family,
-      {},
-    );
-    return family;
-  }
 }

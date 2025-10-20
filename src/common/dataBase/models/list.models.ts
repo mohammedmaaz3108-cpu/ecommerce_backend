@@ -7,7 +7,6 @@ import {
   PrimaryKey,
   Table,
 } from 'sequelize-typescript';
-import { Models } from 'src/common/models/models';
 
 @Table({
   tableName: 'list',

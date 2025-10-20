@@ -14,11 +14,6 @@ export class PlatformsController {
     return this.platformsService.getLists();
   }
 
-  @Get('family')
-  async getFamily() {
-    return this.platformsService.getFamily();
-  }
-
   @Post()
   async createPlatform(@Body() body: any) {
     return this.platformsService.createPlatform(body);
